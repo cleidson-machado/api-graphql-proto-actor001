@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api-graphql-proto-actor001:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-graphql-proto-actor001
+    ports:
+      - 3000:3000
+    networks:
+      - obsdb-net2
+
+networks:
+  obsdb-net2:
+    external: true
