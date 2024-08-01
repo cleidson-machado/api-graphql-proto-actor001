@@ -9,7 +9,7 @@ import { HelloController } from './hello/hello.controller';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true,
+      autoSchemaFile: 'src/graphql/schema.gql',
     }),
   ],
   controllers: [HelloController],
